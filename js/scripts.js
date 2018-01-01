@@ -63,11 +63,11 @@ setGameElements();
 
 function newGame() {
 
-  	player.name = prompt('Proszę wpisać swoje imię', '');
+  	player.name = prompt('Proszę wprowadzić swoje imię.', '');
   	
     while (player.name == false) {
-        alert('Nie wprowadzono imienia !');
-        player.name = prompt('Proszę wpisać swoje imię', '');
+        alert('Nie wprowadzono imienia!');
+        player.name = prompt('Proszę wpisać swoje imię.', '');
     }
     
     if (player.name) {
@@ -94,8 +94,8 @@ function playerPick(playerPick) {
     console.log(player.name.replace(/(^|\s)[a-z]/g,function(f){return f.toUpperCase();}) + ' wybrał/a: ' + playerPick);
     var computerPick = getComputerPick();
 
-    playerPickElem.innerHTML = 'wybrał: ' + playerPick;
-    computerPickElem.innerHTML = 'wybrał: ' + computerPick;
+    playerPickElem.innerHTML = 'Zaznaczono: ' + playerPick;
+    computerPickElem.innerHTML = 'Zaznaczono: ' + computerPick;
 
     checkRoundWinner(playerPick, computerPick);
 
@@ -144,12 +144,12 @@ function checkRoundWinner(playerPick, computerPick) {
     }
 
     if (winnerIs == 'player') {
-        playerResultElem.innerHTML = "\<span class=\"label label-success\"\>Wygrana !!!";
-        computerResultElem.innerHTML = "\<span class=\"label label-danger\"\>Przegrana !!!";
+        playerResultElem.innerHTML = "\<span class=\"label label-success\"\>Wygrana";
+        computerResultElem.innerHTML = "\<span class=\"label label-danger\"\>Przegrana";
         player.score++;
     } else if (winnerIs == 'computer') {
-        computerResultElem.innerHTML = "\<span class=\"label label-success\"\>Wygrana !!!";
-        playerResultElem.innerHTML = "\<span class=\"label label-danger\"\>Przegrana !!!";
+        computerResultElem.innerHTML = "\<span class=\"label label-success\"\>Wygrana";
+        playerResultElem.innerHTML = "\<span class=\"label label-danger\"\>Przegrana";
         computer.score++;
     }
 
