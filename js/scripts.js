@@ -66,7 +66,7 @@ function newGame() {
   	player.name = prompt('Proszę wpisać swoje imię', '');
   	
     while (player.name == false) {
-        alert('Nie wpisałeś imienia !');
+        alert('Nie wprowadzono imienia !');
         player.name = prompt('Proszę wpisać swoje imię', '');
     }
     
